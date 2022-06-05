@@ -1,0 +1,34 @@
+{%extends "layout.html"%}
+
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock stylesheet %}
+
+{% block content %}
+        <div>
+            <center>
+                <h2>Using NaiveBayes Classification Algorithm</h2>
+                
+            </center>
+                
+            <div class="metrics">
+                <div id="acc">
+                    <h3>Model Accuracy:</h3>
+                    <h2>{{acc}}</h2>
+                </div>
+                
+                <div id="prec">
+                    <h3>Precision Score:</h3>
+                    <h2>{{prec}}</h2>
+                </div>
+    
+                <div id="rec">
+                    <h3>Recall Score:</h3>
+                    <h2>{{rec}}</h2>
+                </div>
+
+            </div>  
+        </div>
+        
+{% endblock content %}

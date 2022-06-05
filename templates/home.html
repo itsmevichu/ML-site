@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock stylesheet %}
+
+{% block content %}
+    <center>
+        <h2>WELCOME TO ML-SITE!..</h2>
+        <br>
+        <div class = "content">
+            <form action = "/result" method = "POST" enctype="multipart/form-data">
+                <div class="input">
+                    <input type = "file" name="file" class="upload-box">
+                </div>
+                <input type="submit" value="Train" class="train">
+                
+            </form>
+        </div>
+        
+    </center>
+{% endblock content %}
